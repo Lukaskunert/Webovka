@@ -1,0 +1,9 @@
+<h1>Tohle jsou moje kontakty</h1>
+<h2>tel. číslo: 123456789, mail: tvoje@mama.com, fax: 21322123</h2>
+
+<form (ngSubmit)="printData()">
+  <input [(ngModel)]="jmeno" name="jmeno" class="form-control">
+  <input [(ngModel)]="email" name="email" class="form-control">
+  <textarea [(ngModel)]="zprava" name="zprava" class="form-control"></textarea>
+  <button>Send</button>
+</form>
