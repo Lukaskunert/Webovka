@@ -9,6 +9,8 @@ import { ContactsComponent } from './contacts/contacts.component';
 import {FormsModule} from "@angular/forms";
 import { NavsideComponent } from './navside/navside.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { UsersComponent } from './users/users.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     AboutComponent,
     ContactsComponent,
     NavsideComponent,
-    SidebarComponent
+    SidebarComponent,
+    UsersComponent,
+    UserDetailComponent
   ],
   imports: [
     BrowserModule,
