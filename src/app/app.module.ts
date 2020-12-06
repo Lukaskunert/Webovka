@@ -11,6 +11,7 @@ import { NavsideComponent } from './navside/navside.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { UsersComponent } from './users/users.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
+import { UserCreateComponent } from './user-create/user-create.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
     NavsideComponent,
     SidebarComponent,
     UsersComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    UserCreateComponent
   ],
   imports: [
     BrowserModule,
