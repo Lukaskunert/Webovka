@@ -5,7 +5,7 @@ import {IUserEntity, UsersService} from '../users.service';
 @Component({
 selector: 'app-user-detail',
 templateUrl: './user-detail.component.html',
-styleUrls: ['./user-detail.component.css']
+styleUrls: ['./user-detail.component.scss']
 })
 export class UserDetailComponent implements OnInit {
 
@@ -25,7 +25,7 @@ constructor(
       const idNum = parseInt(id, 10);
       this.usersService.getUserById(idNum)
         .subscribe(
-          (u: IUserEntity) => {
+          (usernameE: IUserEntity) => {
             if (usernameE) {
               this.user = usernameE;
               this.username = usernameE.username;
@@ -45,7 +45,7 @@ constructor(
       .subscribe((usernameE: IUserEntity)=>{
         this.user = usernameE;
         this.username = usernameE.username;
-        redirect('/users');
+        this.router.navigateByUrl('/users');
       })
   }
 }

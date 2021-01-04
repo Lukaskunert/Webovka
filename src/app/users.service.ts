@@ -7,12 +7,6 @@ username: string;
 id: number;
 password: string;
 }
-@Pipe({
-  name: 'zkraceniSlova'
-});
-export class zkraceniSlovaPipe implements PipeTransform {
- transform()
-}
 @Injectable({
 providedIn: 'root'})
 export class UsersService {
