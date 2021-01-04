@@ -1,8 +1,6 @@
-<div id="userinfo">
-  <h1 class="text-center form-text text-primary">User - {{user.username}}</h1>
-  <label>{{user.id}}</label>
-  <label>{{user.username}}</label>
-  <label>{{user.password}}</label>
-</div>
+<form (ngSubmit)="edit()">
+  <input name="username" [(ngModel)]="username">
+  <button class="btn btn-success">KLIK!</button>
+</form>
 
 
