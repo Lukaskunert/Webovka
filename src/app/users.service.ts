@@ -1,10 +1,17 @@
 import {Injectable} from '@angular/core';
 import {Observable, of} from "rxjs";
+import { Pipe, PipeTransform } from '@angular/core';
 
 export interface IUserEntity {
 username: string;
 id: number;
 password: string;
+}
+@Pipe({
+  name: 'zkraceniSlova'
+});
+export class zkraceniSlovaPipe implements PipeTransform {
+ transform()
 }
 @Injectable({
 providedIn: 'root'})

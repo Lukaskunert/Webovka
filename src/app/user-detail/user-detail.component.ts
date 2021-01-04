@@ -9,7 +9,7 @@ styleUrls: ['./user-detail.component.css']
 })
 export class UserDetailComponent implements OnInit {
 
-user: IUserEntity; // zde je saved právě editovaný uživatel
+user: IUserEntity;
 username = '';
 
 
@@ -26,9 +26,9 @@ constructor(
       this.usersService.getUserById(idNum)
         .subscribe(
           (u: IUserEntity) => {
-            if (u) {
-              this.user = u;
-              this.username = u.username;
+            if (usernameE) {
+              this.user = usernameE;
+              this.username = usernameE.username;
             } else {
               this.router.navigateByUrl('/users');
             }
@@ -42,9 +42,9 @@ constructor(
 
   edit() {
     this.usersService.edit(this.user.id, this.username)
-      .subscribe((u: IUserEntity)=>{
-        this.user = u;
-        this.username = u.username;
+      .subscribe((usernameE: IUserEntity)=>{
+        this.user = usernameE;
+        this.username = usernameE.username;
       })
   }
 }
