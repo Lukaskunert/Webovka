@@ -45,6 +45,7 @@ constructor(
       .subscribe((usernameE: IUserEntity)=>{
         this.user = usernameE;
         this.username = usernameE.username;
+        redirect('/users');
       })
   }
 }
