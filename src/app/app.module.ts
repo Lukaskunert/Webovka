@@ -12,6 +12,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { UsersComponent } from './users/users.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { UserCreateComponent } from './user-create/user-create.component';
+import { MyUppercasePipe } from './my-uppercase.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { UserCreateComponent } from './user-create/user-create.component';
     SidebarComponent,
     UsersComponent,
     UserDetailComponent,
-    UserCreateComponent
+    UserCreateComponent,
+    MyUppercasePipe
   ],
   imports: [
     BrowserModule,
