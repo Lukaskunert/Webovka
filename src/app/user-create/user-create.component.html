@@ -1,10 +1,21 @@
-<p>Register here:</p>
-
-<form class="register">
-  <h1 class="form-title text-center text-primary">Create user</h1>
-
-  <input class="form-text" type="text" name="username" placeholder="username" [(ngModel)]="username">
-  <input class="form-text" type="password" name="password" placeholder="password" [(ngModel)]="password">
-  <input class="btn-form" type="submit" (click)="create()" name="submit" value="create">
-
-</form>
+<div>
+  <div>
+    <div>
+      <h1>Vytvoř usera</h1>
+      <form (ngSubmit)="create()">
+        <input minlength="5" #idknazevRE="ngModel" type="text" [(ngModel)]="username">
+        <button>Submit</button>
+      </form>
+      <div *ngIf="idknazevRE.invalid && idknazevRE.touched">
+        <span *ngIf="idknazevRE.errors.idknazevRE">
+          {{idknazevRE.errors.minlength.requiredLength}}
+        </span>
+        <span *ngIf="idknazevRE.errors.maxlength">{{idknazevRE.errors.maxlength}}
+        </span>
+        <span *ngIf="idknazevRE.errors.required">
+          Potřeba jméno
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

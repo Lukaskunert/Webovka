@@ -1,6 +1,26 @@
-<form (ngSubmit)="edit()">
-  <input name="username" [(ngModel)]="username">
-  <button class="btn btn-success">KLIK!</button>
-</form>
+<div>
+  <div>
+    <div>{{user?.username | mojePipa:"..."}}</div>
+    <form>
+      <input minlength="5" #idkjmenoRE="ngModel" value="{{user.username}}" [(ngModel)]="">
+      <button (click)="(user.id)">Zmenit</button>
+      <p>OR</p>
+      <button (click)="(user.id)">Smazat</button>
+    </form>
+    <div *ngIf="idkjmenoRE.invalid && idkjmenoRE.touched">
+      <div class="err">
+        <span *ngIf="idkjmenoRE.errors.minlength">
+          {{idkjmenoRE.errors.minlength.requiredLength}}
+        </span>
+        <span *ngIf="idkjmenoRE.errors.maxlength">
+          {{idkjmenoRE.errors.maxlength}}
+        </span>
+        <span *ngIf="idkjmenoRE.errors.required">
+          Potřeba zadání uživatelského jména
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
 
 
